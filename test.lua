@@ -1,11 +1,11 @@
-local lplr = game:GetService("Players").Players.LocalPlayer
+local lplr = game.Players.LocalPlayer
 
 local QuestData = loadstring(game:HttpGet("https://raw.githubusercontent.com/eixotic07/Bloxfruit/main/Autofarm%20Data.lua"))()
 local WalkTween = loadstring(game:HttpGet("https://raw.githubusercontent.com/eixotic07/Utils/main/Universal%20Tween.lua"))()
 
 -- No Cooldown
 
-local CombatFrameworkOld = require(lplr.PlayerScripts.CombatFramework) 
+local CombatFrameworkOld = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework) 
 require(game.ReplicatedStorage.Util.CameraShaker):Stop()
 
 local CombatFramework = debug.getupvalues(CombatFrameworkOld)[2]
