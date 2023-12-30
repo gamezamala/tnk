@@ -5,15 +5,24 @@ local WalkTween = loadstring(game:HttpGet("https://raw.githubusercontent.com/eix
 
 -- No Cooldown
 
-local CombatFrameworkOld = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework) 
-require(game.ReplicatedStorage.Util.CameraShaker):Stop()
+local CombatFrameworkR = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework) 
 
-local CombatFramework = debug.getupvalues(CombatFrameworkOld)[2]
-game:GetService("RunService").Stepped:Connect(function()
-    CombatFramework.activeController.attacking = false
-	CombatFramework.activeController.increment = 3
-	CombatFramework.activeController.timeToNextAttack = 0
-    CombatFramework.activeController.hitboxMagnitude = 50
+local CameraShakerR = require(game.ReplicatedStorage.Util.CameraShaker)
+
+spawn(function()
+	for i = 1,math.huge do
+		game:GetService("RunService").Heartbeat:wait()
+		if _G.FastFarm then
+			pcall(function()
+					CameraShakerR:Stop()
+					CombatFrameworkR.activeController.attacking = false
+					CombatFrameworkR.activeController.timeToNextAttack = 0
+					CombatFrameworkR.activeController.increment = 3
+					CombatFrameworkR.activeController.hitboxMagnitude = 50
+			end)
+		end
+		game:GetService("RunService").Heartbeat:wait()
+	end
 end)
 
 -- in-game functions
