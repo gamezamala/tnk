@@ -12,10 +12,8 @@ local CombatFramework = debug.getupvalues(CombatFrameworkOld)[2]
 game:GetService("RunService").Stepped:Connect(function()
     CombatFramework.activeController.attacking = false
 	CombatFramework.activeController.increment = 3
-	CombatFramework.activeController.blocking = false
-	CombatFramework.activeController.timeToNextBlock = 0
 	CombatFramework.activeController.timeToNextAttack = 0
-    CombatFramework.activeController.hitboxMagnitude = 54
+    CombatFramework.activeController.hitboxMagnitude = 50
 end)
 
 -- in-game functions
