@@ -1,4 +1,4 @@
-local lplr = game.Players.LocalPlayer
+local lplr = game:GetService("Players").Players.LocalPlayer
 
 local QuestData = loadstring(game:HttpGet("https://raw.githubusercontent.com/eixotic07/Bloxfruit/main/Autofarm%20Data.lua"))()
 local WalkTween = loadstring(game:HttpGet("https://raw.githubusercontent.com/eixotic07/Utils/main/Universal%20Tween.lua"))()
