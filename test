@@ -16,11 +16,6 @@ elseif placeId == 2809202155 then
     YBA = true
     print("\n game not support")
 end
-spawn(function()
-	while wait() do 
-		print("JayKung#8973 ")
-	end
-end)
 if BF then
 	repeat wait() until game:IsLoaded()
 	if getgenv().Setting then else
