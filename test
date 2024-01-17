@@ -1,14 +1,5 @@
- 
 _G.AutoFarm_Level = true
 _G.FastAttack = true
- 
- 
- 
- 
- 
- 
- 
- 
  
 function checklevel()
     local Level = game:GetService("Players").LocalPlayer.Data.Level.Value
@@ -124,7 +115,7 @@ spawn(function()
             local Combat = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
             local Cemara = require(game.ReplicatedStorage.Util.CameraShaker)
             Cemara.Stop()
-				  	     Combat.activeController.attacking = false
+	    Combat.activeController.attacking = false
             Combat.activeController.timeToNextAttack = 0
             Combat.activeController.hitboxMagnitude = 50
             Combat.activeController.increment = 3
