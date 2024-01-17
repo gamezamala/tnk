@@ -11,7 +11,7 @@ _G.FastAttack = true
  
 function checklevel()
     local Level = game:GetService("Players").LocalPlayer.Data.Level.Value
-    if Level == 1 or Level <= 9 then
+    if Level == 1 or Level <= 25 then
         MON = "Bandit [Lv. 5]"
         QUESTTITLE = "Bandit"
         QUESTPOS = CFrame.new(1060.0158691406, 16.424287796021, 1547.9769287109)
