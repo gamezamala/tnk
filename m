@@ -3985,7 +3985,7 @@ spawn(function()
 												v.HumanoidRootPart.CanCollide = false
 												v.Humanoid.WalkSpeed = 0
 												v.Head.CanCollide = false
-												v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+												v.HumanoidRootPart.Size = Vector3.new(60,60,60)
 												StartMagnet = true
 												topos(v.HumanoidRootPart.CFrame * MethodFarm)
 												game:GetService'VirtualUser':CaptureController()
