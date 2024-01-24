@@ -4530,7 +4530,7 @@ Setting:Toggle("Auto Click",false,function(value)
 end)
 
 Setting:Toggle("Disabled Damage Text",_G.DisableDamage,function(value)
- _G.DisableDamage = value
+ _G.DisableDamage = true
 end)
 
 spawn(function()
